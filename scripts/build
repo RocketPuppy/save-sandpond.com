@@ -1,1 +1,1 @@
-nix-shell -p nodejs --run "npm run build"
+nix-shell -p nodejs-9_x --run "npm run build"
