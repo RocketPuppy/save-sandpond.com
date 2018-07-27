@@ -1,13 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import FullContent from "../components/full-content";
+import Title from "../components/title";
 import glamorous from "glamorous";
-
-const Title = glamorous.h1({
-  fontSize: "48px",
-  fontWeight: "bold",
-  textAlign: "center"
-});
 
 const IndexPage = () => (
   <FullContent>
