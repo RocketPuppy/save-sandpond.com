@@ -11,5 +11,8 @@ export default {
   },
   layout: {
     contentWidth: "900px"
+  },
+  colors: {
+    background: "#E0FCFF"
   }
 };
