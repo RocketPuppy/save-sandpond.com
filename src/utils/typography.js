@@ -1,4 +1,5 @@
 import Typography from 'typography';
+import styles from "./styles";
 
 const typography = new Typography({
   baseFontSize: "24px",
@@ -25,7 +26,7 @@ const typography = new Typography({
   headerWeight: "400",
   bodyWeight: "400",
   boldWeight: "700",
-  blockMarginBottom: "1rem",
+  blockMarginBottom: styles.spacing.medium,
   includeNormalize: true
 });
 
