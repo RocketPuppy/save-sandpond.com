@@ -29,12 +29,4 @@ const typography = new Typography({
   includeNormalize: true
 });
 
-export const constants = {
-  fontFamilies: {
-    singleHeader: "Carrois Gothic SC",
-    multiHeader: "Julius Sans One",
-    body: "Cormorant Garamond"
-  }
-};
-
 export default typography;
