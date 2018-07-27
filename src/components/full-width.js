@@ -3,8 +3,8 @@ import glamorous from "glamorous";
 import styles from "../utils/styles";
 
 export default glamorous.div({
-  padding: styles.spacing.medium,
-  maxWidth: "900px",
+  padding: styles.spacing.large,
+  maxWidth: "1400px",
   marginLeft: "auto",
   marginRight: "auto",
   display: "flex",
