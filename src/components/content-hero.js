@@ -13,14 +13,18 @@ const textAlignChoices = {
 };
 
 export default glamorous.div(({ alignment }) => ({
-  maxWidth: styles.layout.contentWidth,
+  width: "100%",
   marginTop: styles.spacing.large,
+  padding: styles.spacing.small,
   alignSelf: alignmentChoices[alignment],
+  display: "flex",
+  flexDirection: "column",
   "& > *": {
     textAlign: textAlignChoices[alignment]
   },
   "& > p": {
     textAlign: "justify",
-    hyphens: "auto"
+    hyphens: "auto",
+    alignSelf: alignmentChoices[alignment]
   }
 }));
