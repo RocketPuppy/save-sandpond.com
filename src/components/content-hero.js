@@ -12,7 +12,24 @@ const textAlignChoices = {
   "right": "right"
 };
 
-export default glamorous.div(({ alignment }) => ({
+const alignmentGradient = {
+  "left": `linear-gradient(90deg, ${styles.colors.background}, transparent)`,
+  "right": `linear-gradient(270deg, ${styles.colors.background}, transparent)`
+};
+
+const themes = {
+  "blue": {
+    baseColor: "#B7FAFF"
+  },
+  "green": {
+    baseColor: "#D6FFB7"
+  },
+  "orange": {
+    baseColor: "#FFE0B7"
+  }
+};
+
+export default glamorous.div(({ alignment, theme }) => ({
   width: "100%",
   marginTop: styles.spacing.large,
   padding: styles.spacing.small,
@@ -26,5 +43,9 @@ export default glamorous.div(({ alignment }) => ({
     textAlign: "justify",
     hyphens: "auto",
     alignSelf: alignmentChoices[alignment]
-  }
+  },
+  background:
+    alignmentGradient[alignment] +
+    `, linear-gradient(${styles.colors.background}, transparent)` +
+    `, linear-gradient(${styles.colors.background}, ${themes[theme].baseColor} 50%)`
 }));
