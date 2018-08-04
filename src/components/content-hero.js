@@ -14,7 +14,11 @@ const textAlignChoices = {
 
 const alignmentGradient = {
   "left": `linear-gradient(90deg, ${styles.colors.background}, transparent)`,
-  "right": `linear-gradient(270deg, ${styles.colors.background}, transparent)`
+  "left-bottom": `linear-gradient(0deg, ${styles.colors.background}, transparent 5%)`,
+  "left-reverse": `linear-gradient(270deg, ${styles.colors.background}, transparent 5%)`,
+  "right": `linear-gradient(270deg, ${styles.colors.background}, transparent)`,
+  "right-bottom": `linear-gradient(0deg, ${styles.colors.background}, transparent 5%)`,
+  "right-reverse": `linear-gradient(90deg, ${styles.colors.background}, transparent 5%)`,
 };
 
 const themes = {
@@ -58,7 +62,9 @@ const Background = glamorous.div(({ alignment, theme }) => ({
   bottom: 0,
   right: 0,
   background:
-    alignmentGradient[alignment] +
+    alignmentGradient[alignment] + ", " +
+    alignmentGradient[alignment + "-reverse"] + ", " +
+    alignmentGradient[alignment + "-bottom"] +
     `, linear-gradient(${styles.colors.background}, transparent)` +
     `, linear-gradient(${styles.colors.background}, ${themes[theme].baseColor} 50%)`
 }));
