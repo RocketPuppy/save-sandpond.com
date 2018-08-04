@@ -29,23 +29,63 @@ const themes = {
   }
 };
 
-export default glamorous.div(({ alignment, theme }) => ({
+const Content = glamorous.div(({ alignment }) => ({
   width: "100%",
   marginTop: styles.spacing.large,
   padding: styles.spacing.small,
   alignSelf: alignmentChoices[alignment],
   display: "flex",
   flexDirection: "column",
+  background: "transparent",
   "& > *": {
-    textAlign: textAlignChoices[alignment]
+    textAlign: textAlignChoices[alignment],
+    background: "none"
   },
   "& > p": {
     textAlign: "justify",
     hyphens: "auto",
     alignSelf: alignmentChoices[alignment]
   },
+  ":hover > .overlays > .revealing-overlay": {
+    background: "transparent"
+  },
+}));
+
+const Background = glamorous.div(({ alignment, theme }) => ({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  bottom: 0,
+  right: 0,
   background:
     alignmentGradient[alignment] +
     `, linear-gradient(${styles.colors.background}, transparent)` +
     `, linear-gradient(${styles.colors.background}, ${themes[theme].baseColor} 50%)`
 }));
+
+const RevealingOverlay = glamorous.div({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  bottom: 0,
+  right: 0,
+  background: styles.colors.background,
+  transition: "background 0.3s ease-in-out"
+});
+
+const Overlays = glamorous.div({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  bottom: 0,
+  right: 0
+});
+
+export default ({ alignment, theme, className, children }) =>
+  <Content className={className} alignment={alignment}>
+    <Overlays className="overlays">
+      <Background alignment={alignment} theme={theme} />
+      <RevealingOverlay className="revealing-overlay"/>
+    </Overlays>
+    {children}
+  </Content>;
