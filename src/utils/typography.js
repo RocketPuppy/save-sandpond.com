@@ -23,7 +23,7 @@ const typography = new Typography({
   bodyFontFamily: ["Cormorant Garamond", "serif"],
   headerColor: "inherit",
   bodyColor: "hsl(0, 0%, 0%, 0.8)",
-  headerWeight: "400",
+  headerWeight: "700",
   bodyWeight: "400",
   boldWeight: "700",
   blockMarginBottom: styles.spacing.medium,

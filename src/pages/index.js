@@ -6,13 +6,18 @@ import Hero from "../components/hero";
 import ContentHero from "../components/content-hero";
 import TextContent from "../components/text-content";
 import glamorous from "glamorous";
+import Img from "gatsby-image";
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <FullWidth>
-    <Hero>
-      <Title>Save Sand&nbsp;Pond</Title>
-      <h2>No Storage Facility</h2>
-      <h3>Warwick, RI</h3>
+    <Hero image={
+      <Img
+        title="Header image"
+        alt="Sunset on Sand Pond"
+        sizes={data.headerImage.sizes}
+      />
+    } textColor="black" textOutlineColor="white">
+      <Title centered>Save Sand Pond</Title>
     </Hero>
     <ContentHero alignment="left" theme="blue">
       <h2>Art In Ice</h2>
@@ -33,6 +38,16 @@ const IndexPage = () => (
       </TextContent>
     </ContentHero>
   </FullWidth>
-)
+);
+
+export const pageQuery = graphql`
+  query HeaderImageQuery {
+    headerImage: imageSharp(id: { regex: "/sunset_large_cropped/" }) {
+      sizes(maxWidth: 1400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;
 
 export default IndexPage

@@ -4,7 +4,7 @@ import glamorous from "glamorous";
 import styles from "../utils/styles";
 
 export default glamorous.h1(({ centered=false }) => ({
-  fontSize: "48px",
+  fontSize: "68px",
   textAlign: centered ? "center" : "left",
   fontFamily: styles.fontFamilies.singleHeader
 }));
