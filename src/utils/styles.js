@@ -13,6 +13,6 @@ export default {
     contentWidth: "900px"
   },
   colors: {
-    background: "#E0FCFF"
+    background: "#fafafa"
   }
 };
