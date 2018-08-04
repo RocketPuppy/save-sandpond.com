@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styles from "../utils/styles";
+import { css } from "glamor";
+
+css.global('*', { position: "relative" });
 
 const Layout = ({ children, data }) => (
   <div style={{ background: styles.colors.background }}>
