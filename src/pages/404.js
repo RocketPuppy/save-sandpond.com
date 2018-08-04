@@ -6,7 +6,7 @@ const NotFoundPage = () => (
   <FullContent>
     <h1>404</h1>
     <h2>Page not found</h2>
-    <Link to="/">Return Home</Link>
+    <Link to="/">Return to Save Sand Pond</Link>
   </FullContent>
 )
 
