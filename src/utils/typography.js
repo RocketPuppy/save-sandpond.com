@@ -3,7 +3,7 @@ import styles from "./styles";
 
 const typography = new Typography({
   baseFontSize: "24px",
-  baseLineHeight: 1.5,
+  baseLineHeight: 1.7,
   scaleRatio: 2.2,
   googleFonts: [
     {
