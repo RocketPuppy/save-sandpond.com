@@ -14,5 +14,9 @@ export default {
   },
   colors: {
     background: "#fafafa"
+  },
+  mediaQueries: {
+    phone: "@media(max-width: 425px)",
+    tablet: "@media(min-width: 426px, max-width: 767px)"
   }
 };

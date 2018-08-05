@@ -54,6 +54,13 @@ const Content = glamorous.div(({ alignment }) => ({
   ":hover > .overlays > .revealing-overlay": {
     background: "transparent"
   },
+  [styles.mediaQueries.phone]: {
+    "& > *": {
+      textAlign: "left"
+    },
+    marginTop: styles.spacing.medium,
+    padding: 0
+  }
 }));
 
 const Background = glamorous.div(({ alignment, theme }) => ({

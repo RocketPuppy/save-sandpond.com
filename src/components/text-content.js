@@ -22,7 +22,13 @@ const Paragraph = glamorous.p({
 const Image = glamorous.div({
   marginLeft: styles.spacing.medium,
   marginRight: styles.spacing.medium,
-  flex: "0 0 auto"
+  flex: "0 0 auto",
+  [styles.mediaQueries.phone]: {
+    "& .image": {
+      width: "300px !important",
+      height: "300px !important",
+    }
+  }
 });
 
 const FlexRow = glamorous.div(({ alignment }) => ({
@@ -38,6 +44,6 @@ export default ({ alignment, image, text }) =>
       {text}
     </Paragraph>
     <Image>
-      <Img {...image} />
+      <Img {...image} className="image"/>
     </Image>
   </FlexRow>
