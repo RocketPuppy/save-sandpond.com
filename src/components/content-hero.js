@@ -1,6 +1,7 @@
 import React from 'react'
 import glamorous from "glamorous";
 import styles from "../utils/styles";
+import TextContent from "../components/text-content";
 
 const alignmentChoices = {
   left: "flex-start",
@@ -87,11 +88,16 @@ const Overlays = glamorous.div({
   right: 0
 });
 
-export default ({ alignment, theme, className, children }) =>
+export default ({ alignment, theme, className, header, image, text }) =>
   <Content className={className} alignment={alignment}>
     <Overlays className="overlays">
       <Background alignment={alignment} theme={theme} />
       <RevealingOverlay className="revealing-overlay"/>
     </Overlays>
-    {children}
+    <h2>{header}</h2>
+    <TextContent
+      alignment={alignment}
+      image={image}
+      text={text}
+    />
   </Content>;

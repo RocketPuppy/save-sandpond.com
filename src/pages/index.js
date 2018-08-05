@@ -4,7 +4,6 @@ import FullWidth from "../components/full-width";
 import Title from "../components/title";
 import Hero from "../components/hero";
 import ContentHero from "../components/content-hero";
-import TextContent from "../components/text-content";
 import glamorous from "glamorous";
 import Img from "gatsby-image";
 
@@ -19,42 +18,41 @@ const IndexPage = ({ data }) => (
     } textColor="black" textOutlineColor="white">
       <Title centered>Save Sand Pond</Title>
     </Hero>
-    <ContentHero alignment="left" theme="green">
-      <h2>Wildlife</h2>
-      <TextContent
-        alignment="left"
-        image={{
-          title: "Wildlife",
-          alt: "Geese on Sand Pond",
-          resolutions: data.wildlifeImage.resolutions
-        }}
-        text="The calm, secluded environment of sand pond makes it attractive to many kinds of wildlife. Every year a family of geese makes their home here. In the spring the tiny goslings can be seen swimming and enjoying the pond. The geese share the pond with egrets, herons, and swans in addition to many other small birds. They can often be spotted in shallows along with turtles sunning themselves. The pond is also home to many fish, and fishing is a popular pastime for the residents as well as the birds! Rounding it off the pond is home to a diverse array of aquatic and non-aquatic plant life."
-      />
-    </ContentHero>
-    <ContentHero alignment="right" theme="blue">
-      <h2>Recreation</h2>
-      <TextContent
-        alignment="right"
-        image={{
-          title: "Recreation",
-          alt: "Paddle boats on Sand Pond",
-          resolutions: data.recreationImage.resolutions
-        }}
-        text="The pond is open to Warwick residents year-round! Because of its exceptionally clean water many members of the community come to swim and boat on the pond. Between spring and summer the water is exceptionally clear and one can often see straight to the bottom. When summer is in full swing the children at the local daycare can be seen enjoying their fleet of paddle-boats. Beach access provides a convenient place to fish and swim, as well as to host small parties."
-      />
-    </ContentHero>
-    <ContentHero alignment="left" theme="orange">
-      <h2>Self-storage</h2>
-      <TextContent
-        alignment="left"
-        image={{
-          title: "Self-Storage",
-          alt: "Artist concept of self-storage on Sand Pond",
-          resolutions: data.storageImage.resolutions
-        }}
-        text="The addition of a self-storage center will eliminate many of the attractive aspects of the pond. The storage center will loom over the area, casting a shadow that will erode its secluded nature. Runoff will pollute the pond and only the hardiest and most temperamental wildlife will remain. Swimming on the pond will no longer be fun and inviting. Fortunately we can work together to save this hidden gem of the Warwick community. To get involved please email us at savesandpond@gmail.com"
-      />
-    </ContentHero>
+    <ContentHero
+      alignment="left"
+      theme="green"
+      header="Wildlife"
+      image={{
+        title: "Wildlife",
+        alt: "Geese on Sand Pond",
+        resolutions: data.wildlifeImage.resolutions
+      }}
+      text="The calm, secluded environment of sand pond makes it attractive to many kinds of wildlife. Every year a family of geese makes their home here. In the spring the tiny goslings can be seen swimming and enjoying the pond. The geese share the pond with egrets, herons, and swans in addition to many other small birds. They can often be spotted in shallows along with turtles sunning themselves. The pond is also home to many fish, and fishing is a popular pastime for the residents as well as the birds! Rounding it off the pond is home to a diverse array of aquatic and non-aquatic plant life."
+    />
+    <ContentHero
+      alignment="right"
+      theme="blue"
+      header="Recreation"
+      alignment="right"
+      image={{
+        title: "Recreation",
+        alt: "Paddle boats on Sand Pond",
+        resolutions: data.recreationImage.resolutions
+      }}
+      text="The pond is open to Warwick residents year-round! Because of its exceptionally clean water many members of the community come to swim and boat on the pond. Between spring and summer the water is exceptionally clear and one can often see straight to the bottom. When summer is in full swing the children at the local daycare can be seen enjoying their fleet of paddle-boats. Beach access provides a convenient place to fish and swim, as well as to host small parties."
+    />
+    <ContentHero
+      alignment="left"
+      theme="orange"
+      header="Self-Storage"
+      alignment="left"
+      image={{
+        title: "Self-Storage",
+        alt: "Artist concept of self-storage on Sand Pond",
+        resolutions: data.storageImage.resolutions
+      }}
+      text="The addition of a self-storage center will eliminate many of the attractive aspects of the pond. The storage center will loom over the area, casting a shadow that will erode its secluded nature. Runoff will pollute the pond and only the hardiest and most temperamental wildlife will remain. Swimming on the pond will no longer be fun and inviting. Fortunately we can work together to save this hidden gem of the Warwick community. To get involved please email us at savesandpond@gmail.com"
+    />
   </FullWidth>
 );
 
