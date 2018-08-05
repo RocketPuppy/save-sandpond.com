@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => (
         alt: "Artist concept of self-storage on Sand Pond",
         resolutions: data.storageImage.resolutions
       }}
-      text="The addition of a self-storage center will eliminate many of the attractive aspects of the pond. The storage center will loom over the area, casting a shadow that will erode its secluded nature. Runoff will pollute the pond and only the hardiest and most temperamental wildlife will remain. Swimming on the pond will no longer be fun and inviting. Fortunately we can work together to save this hidden gem of the Warwick community."
+      text="The addition of the proposed self-storage center will eliminate many of the attractive aspects of the pond. The storage center will loom over the area, casting a shadow that will erode its secluded nature. Runoff will pollute the pond and only the hardiest and most temperamental wildlife will remain. Swimming on the pond will no longer be fun and inviting. Fortunately we can work together to save this hidden gem of the Warwick community."
     />
     <CallToAction
       text="To get involved please email us at"
