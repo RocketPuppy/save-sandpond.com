@@ -19,22 +19,40 @@ const IndexPage = ({ data }) => (
     } textColor="black" textOutlineColor="white">
       <Title centered>Save Sand Pond</Title>
     </Hero>
-    <ContentHero alignment="left" theme="blue">
-      <h2>Art In Ice</h2>
-      <TextContent>
-        Aenean id urna posuere, accumsan ipsum venenatis, maximus lectus. Duis urna sapien, fermentum quis cursus blandit, mollis eget justo. Sed metus mauris, feugiat in congue suscipit, ultricies in elit. Nam consequat aliquet lacus, quis mattis dui vulputate et. Proin lobortis ac ex nec ultricies. Aenean condimentum augue vel vulputate dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris interdum gravida viverra. Fusce porta accumsan vulputate. Nunc eros eros, mollis at lacinia vitae, elementum ac mi. Aenean scelerisque pulvinar mollis. Integer vulputate ornare volutpat. Vivamus est arcu, egestas at dui eget, rutrum rutrum risus.
+    <ContentHero alignment="left" theme="green">
+      <h2>Wildlife</h2>
+      <TextContent alignment="left" image={
+        <Img
+          title="Wildlife"
+          alt="Geese on Sand Pond"
+          resolutions={data.wildlifeImage.resolutions}>
+        </Img>
+      }>
+        The calm, secluded environment of sand pond makes it attractive to many kinds of wildlife. Every year a family of geese makes their home here. In the spring the tiny goslings can be seen swimming and enjoying the pond. The geese share the pond with egrets, herons, and swans in addition to many other small birds. They can often be spotted in shallows along with turtles sunning themselves. The pond is also home to many fish, and fishing is a popular pastime for the residents as well as the birds! Rounding it off the pond is home to a diverse array of aquatic and non-aquatic plant life.
       </TextContent>
     </ContentHero>
-    <ContentHero alignment="right" theme="green">
-      <h2>Liddle Tots 2 Teen</h2>
-      <TextContent>
-        Sed augue est, lacinia et euismod sit amet, ultricies et elit. Praesent facilisis lacus semper augue porttitor, et sodales elit faucibus. Praesent non dictum justo. Nullam vehicula purus a mollis laoreet. Mauris convallis odio non tortor sollicitudin, ut varius tellus luctus. Aenean consequat, libero at eleifend dignissim, enim libero vestibulum diam, quis eleifend dolor massa id magna. Vivamus luctus tempus accumsan. Maecenas ac risus non sapien volutpat accumsan eget at odio. Sed sit amet elit sed ligula dapibus tempor. Vestibulum risus nulla, molestie eget dolor sit amet, eleifend egestas lorem.
+    <ContentHero alignment="right" theme="blue">
+      <h2>Recreation</h2>
+      <TextContent alignment="right" image={
+        <Img
+          title="Recreation"
+          alt="Paddle boats on Sand Pond"
+          resolutions={data.recreationImage.resolutions}>
+        </Img>
+      }>
+        The pond is open to Warwick residents year-round! Because of its exceptionally clean water many members of the community come to swim and boat on the pond. Between spring and summer the water is exceptionally clear and one can often see straight to the bottom. When summer is in full swing the children at the local daycare can be seen enjoying their fleet of paddle-boats. Beach access provides a convenient place to fish and swim, as well as to host small parties.
       </TextContent>
     </ContentHero>
     <ContentHero alignment="left" theme="orange">
-      <h2>The Storage Center</h2>
-      <TextContent>
-        Fusce congue auctor quam quis blandit. Vestibulum commodo eleifend ex quis placerat. Cras tellus turpis, fringilla et facilisis in, vestibulum in enim. Vivamus at aliquam massa. Ut accumsan varius consectetur. Praesent tincidunt sed dolor non molestie. Quisque in ornare magna. Sed dapibus facilisis malesuada. Donec pharetra, dui ac tincidunt mattis, enim felis efficitur nunc, id elementum enim justo non ipsum. Curabitur aliquet vitae dui nec porta. Etiam eleifend eros ac sem vulputate sodales. Sed sapien nulla, egestas vitae malesuada convallis, fringilla a tellus.
+      <h2>Self-storage</h2>
+      <TextContent alignment="left" image={
+        <Img
+          title="Self-Storage"
+          alt="Artist concept of self-storage on Sand Pond"
+          resolutions={data.storageImage.resolutions}>
+        </Img>
+      }>
+        The addition of a self-storage center will eliminate many of the attractive aspects of the pond. The storage center will loom over the area, casting a shadow that will erode its secluded nature. Runoff will pollute the pond and only the hardiest and most temperamental wildlife will remain. Swimming on the pond will no longer be fun and inviting. Fortunately we can work together to save this hidden gem of the Warwick community. To get involved please email us at savesandpond@gmail.com
       </TextContent>
     </ContentHero>
   </FullWidth>
@@ -45,6 +63,21 @@ export const pageQuery = graphql`
     headerImage: imageSharp(id: { regex: "/sunset_large_cropped/" }) {
       sizes(maxWidth: 1400) {
         ...GatsbyImageSharpSizes
+      }
+    }
+    wildlifeImage: imageSharp(id: { regex: "/geese/" }) {
+      resolutions(height: 400) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    recreationImage: imageSharp(id: { regex: "/paddle_boat_kids/" }) {
+      resolutions(height: 400) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    storageImage: imageSharp(id: { regex: "/storage_unit_rendering/" }) {
+      resolutions(height: 400) {
+        ...GatsbyImageSharpResolutions
       }
     }
   }
