@@ -19,11 +19,11 @@ const typography = new Typography({
       styles: ["400"]
     }
   ],
-  headerFontFamily: ["Julius Sans One", "sans-serif"],
+  headerFontFamily: ["Carrois Gothic SC", "sans-serif"],
   bodyFontFamily: ["Cormorant Garamond", "serif"],
   headerColor: "inherit",
   bodyColor: "hsl(0, 0%, 0%, 0.8)",
-  headerWeight: "700",
+  headerWeight: "400",
   bodyWeight: "400",
   boldWeight: "700",
   blockMarginBottom: styles.spacing.medium,
