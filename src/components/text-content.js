@@ -1,6 +1,7 @@
 import React from 'react'
 import glamorous from "glamorous";
 import styles from "../utils/styles";
+import Img from "gatsby-image";
 
 const margins = {
   left: `0 ${styles.spacing.medium} 0 0`,
@@ -31,12 +32,12 @@ const FlexRow = glamorous.div(({ alignment }) => ({
   justifyContent: "center"
 }));
 
-export default ({ alignment, image, children }) =>
+export default ({ alignment, image, text }) =>
   <FlexRow alignment={alignment}>
     <Paragraph>
-      {children}
+      {text}
     </Paragraph>
     <Image>
-      {image}
+      <Img {...image} />
     </Image>
   </FlexRow>
