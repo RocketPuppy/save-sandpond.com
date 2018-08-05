@@ -1,6 +1,8 @@
 import React from 'react'
 import glamorous from "glamorous";
 import styles from "../utils/styles";
+import Img from "gatsby-image";
+import Title from "../components/title";
 
 const FloatingText = glamorous.div(({ color, outlineColor }) => ({
   position: "absolute",
@@ -23,11 +25,11 @@ const Container = glamorous.div({
   marginBottom: styles.spacing.large
 });
 
-export default ({ image, textColor, textOutlineColor, children }) => (
+export default ({ image, textColor, textOutlineColor, text }) => (
   <Container>
-    {image}
+    <Img {...image}/>
     <FloatingText color={textColor} outlineColor={textOutlineColor}>
-      {children}
+      <Title centered>{text}</Title>
     </FloatingText>
   </Container>
 );

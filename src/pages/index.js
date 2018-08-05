@@ -1,24 +1,23 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import FullWidth from "../components/full-width";
-import Title from "../components/title";
 import Hero from "../components/hero";
 import ContentHero from "../components/content-hero";
 import glamorous from "glamorous";
-import Img from "gatsby-image";
 import CallToAction from "../components/call-to-action";
 
 const IndexPage = ({ data }) => (
   <FullWidth>
-    <Hero image={
-      <Img
-        title="Header image"
-        alt="Sunset on Sand Pond"
-        sizes={data.headerImage.sizes}
-      />
-    } textColor="black" textOutlineColor="white">
-      <Title centered>Save Sand Pond</Title>
-    </Hero>
+    <Hero
+      image={{
+        title: "Header image",
+        alt: "Sunset on Sand Pond",
+        sizes: data.headerImage.sizes
+      }}
+      textColor="black"
+      textOutlineColor="white"
+      text="Save Sand Pond"
+    />
     <ContentHero
       alignment="left"
       theme="green"
