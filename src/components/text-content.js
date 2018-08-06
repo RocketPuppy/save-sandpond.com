@@ -16,7 +16,12 @@ const flexDirection = {
 const Paragraph = glamorous.p({
   maxWidth: styles.layout.contentWidth,
   textAlign: "justify",
-  flex: "2 1 50%"
+  flex: "2 1 50%",
+  [styles.mediaQueries.phone]: {
+    fontSize: "20px",
+    lineHeight: "1.4",
+    textAlign: "left"
+  }
 });
 
 const Image = glamorous.div({
