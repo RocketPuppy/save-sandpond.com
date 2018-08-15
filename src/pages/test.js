@@ -4,7 +4,7 @@ import FullWidth from "../components/full-width";
 import Hero from "../components/hero";
 import ContentHero from "../components/content-hero";
 import glamorous from "glamorous";
-import CallToAction from "../components/call-to-action";
+import ActionContent from "../components/action-content";
 
 const IndexPage = ({ data }) => (
   <FullWidth>
@@ -53,9 +53,12 @@ const IndexPage = ({ data }) => (
       }}
       text="Sadly, there is a proposal for a 3-story, 630 unit self-storage facility to be built on the northwest half of the pond at Pond Plaza, 1160 Post Road. Should the city allow this proposed self-storage center many of the attractive aspects of the pond will be eliminated. And there could be the potential of irreversible environmental harm to the fragile kettle pond. Fortunately we can work together to save this hidden gem Sand Pond for the Warwick community."
     />
-    <CallToAction
-      text="To get involved please email us at"
-      email="savesandpond@gmail.com"
+    <ActionContent
+      header="How to help save Sand Pond"
+      items={[
+        (<span>Come to the <a href="https://www.facebook.com/events/2141315522855942/">Sand Pond Palooza!</a></span>),
+        (<span>Email us at: <a href="mailto:savesandpond@gmail.com">savesandpond@gmail.com</a></span>)
+      ]}
     />
   </FullWidth>
 );
