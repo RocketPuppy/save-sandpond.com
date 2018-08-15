@@ -67,7 +67,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    wildlifeImage: imageSharp(id: { regex: "/geese/" }) {
+    wildlifeImage: imageSharp(id: { regex: "/heron/" }) {
       resolutions(height: 400) {
         ...GatsbyImageSharpResolutions
       }
