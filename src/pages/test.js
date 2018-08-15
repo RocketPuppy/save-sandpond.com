@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => (
         alt: "Geese on Sand Pond",
         resolutions: data.wildlifeImage.resolutions
       }}
-      text="The calm, secluded environment of sand pond makes it attractive to many kinds of wildlife. Every year a family of geese makes their home here. In the spring the tiny goslings can be seen swimming and enjoying the pond. The geese share the pond with egrets, herons, and swans in addition to many other small birds. They can often be spotted in shallows along with turtles sunning themselves. The pond is also home to many fish, and fishing is a popular pastime for the residents as well as the birds! Rounding it off the pond is home to a diverse array of aquatic and non-aquatic plant life."
+      text="The calm, secluded environment of Sand Pond makes it attractive to many kinds of waterfowl throughout the seasons, including egrets, herons, cormorants, hooded mergansers, various ducks, geese and swans. They can often be spotted in shallows along with turtles sunning themselves. The pond is also home to many fish, and fishing is a popular pastime for the residents as well as the birds! Rounding it off the pond is home to a diverse array of aquatic and non-aquatic plant life."
     />
     <ContentHero
       alignment="right"
@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => (
         alt: "Paddle boats on Sand Pond",
         resolutions: data.recreationImage.resolutions
       }}
-      text="The pond is open to Warwick residents year-round. Because of its exceptionally clean water many members of the community come to swim and boat on the pond. Between spring and summer the water is clear, and one can often see straight to the bottom. When summer is in full swing the children at the local daycare can be seen enjoying their fleet of paddle-boats. Beach access provides a convenient place to fish and swim, as well as to host small parties."
+      text="The pond is open to Warwick residents year-round. Because of its exceptionally clean water many members of the community come to swim and boat on the pond. Between spring and summer the water is clear, and one can often see straight to the bottom. When summer is in full swing the children at the local daycare can be seen enjoying their fleet of paddle-boats. Beach access provides a convenient place to fish and swim."
     />
     <ContentHero
       alignment="left"
@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => (
         alt: "Artist concept of self-storage on Sand Pond",
         resolutions: data.storageImage.resolutions
       }}
-      text="The addition of the proposed self-storage center will eliminate many of the attractive aspects of the pond. The storage center will loom over the area, casting a shadow that will erode its private nature. Runoff will pollute the pond, and only the hardiest and least friendly wildlife will remain. Swimming on the pond will no longer be fun and inviting. Fortunately we can work together to save this hidden gem of the Warwick community."
+      text="Sadly, there is a proposal for a 3-story, 630 unit self-storage facility to be built on the northwest half of the pond at Pond Plaza, 1160 Post Road. Should the city allow this proposed self-storage center many of the attractive aspects of the pond will be eliminated. And there could be the potential of irreversible environmental harm to the fragile kettle pond. Fortunately we can work together to save this hidden gem Sand Pond for the Warwick community."
     />
     <CallToAction
       text="To get involved please email us at"
