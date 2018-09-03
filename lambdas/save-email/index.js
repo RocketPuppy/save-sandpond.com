@@ -14,11 +14,12 @@ function cors(origin) {
 
 exports.saveEmailPOST = (req, res) => {
   console.log("Body: ", req.body);
+  var origin = req.get("Origin");
 
   // Set CORS headers
   // and cache preflight response for an 3600s
-  if(!cors(req.get("Origin"))) {
-    console.log("Origin not allowed");
+  if(!cors(origin)) {
+    console.log("Origin not allowed: ", origin);
     res.set("Access-Control-Allow-Origin", allowedOrigins[0]);
     res.set("Access-Control-Allow-Methods", "POST");
     res.set("Access-Control-Allow-Headers", "Content-Type");
@@ -26,7 +27,7 @@ exports.saveEmailPOST = (req, res) => {
     res.status(401).send('');
     return;
   }
-  console.log("Origin passed");
+  console.log("Origin passed: ", origin);
   res.set("Access-Control-Allow-Origin", req.get("Origin"));
   res.set("Access-Control-Allow-Methods", "POST");
   res.set("Access-Control-Allow-Headers", "Content-Type");
@@ -72,7 +73,7 @@ exports.saveEmailPOST = (req, res) => {
     console.log("Saving entity: ", entity);
     datastore.save(entity, function(err) {
       if(err) {
-        console.log("Error while saving entity: ", err);
+        console.error("Error while saving entity: ", err);
         res.status(500).send('');
         return;
       }
