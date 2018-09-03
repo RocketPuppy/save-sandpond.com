@@ -31,7 +31,7 @@ const VerticalForm = glamorous.form({
 });
 
 export default () => (
-  <VerticalForm method="POST" action="/mailing-list-signup">
+  <VerticalForm method="POST" action={process.env.MAILING_LIST_SIGNUP_ENDPOINT}>
     <SingleLineInput for="name">
       <span>Name:</span><SmallInput tabindex={0} type="text" name="name" />
      </SingleLineInput>
