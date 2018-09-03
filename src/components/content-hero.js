@@ -24,13 +24,13 @@ const alignmentGradient = {
 
 const themes = {
   "blue": {
-    baseColor: "#B7FAFF"
+    baseColor: styles.colors.blue
   },
   "green": {
-    baseColor: "#D6FFB7"
+    baseColor: styles.colors.green
   },
   "orange": {
-    baseColor: "#FFE0B7"
+    baseColor: styles.colors.orange
   }
 };
 
