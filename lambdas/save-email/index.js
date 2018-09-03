@@ -4,12 +4,29 @@ var datastore = new Datastore();
 
 var Busboy = require('busboy');
 
+var allowedOrigins = ["https://www.save-sandpond.com", "https://save-sandpond.com"];
+
+function cors(origin) {
+  return allowedOrigins.reduce(function(b, allowedOrigin) {
+    return b || origin == allowedOrigin;
+  }, false);
+}
+
 exports.saveEmailPOST = (req, res) => {
   console.log("Body: ", req.body);
 
-   // Set CORS headers
+  // Set CORS headers
   // and cache preflight response for an 3600s
-  res.set("Access-Control-Allow-Origin", "*");
+
+  if(!cors(req.get("Origin"))) {
+    res.set("Access-Control-Allow-Origin", allowedOrigins.first);
+    res.set("Access-Control-Allow-Methods", "POST");
+    res.set("Access-Control-Allow-Headers", "Content-Type");
+    res.set("Access-Control-Max-Age", "3600");
+    res.status(401);
+    return;
+  }
+  res.set("Access-Control-Allow-Origin", req.get("Origin"));
   res.set("Access-Control-Allow-Methods", "POST");
   res.set("Access-Control-Allow-Headers", "Content-Type");
   res.set("Access-Control-Max-Age", "3600");
