@@ -19,7 +19,7 @@ exports.saveEmailPOST = (req, res) => {
   // and cache preflight response for an 3600s
   if(!cors(req.get("Origin"))) {
     console.log("Origin not allowed");
-    res.set("Access-Control-Allow-Origin", allowedOrigins.first);
+    res.set("Access-Control-Allow-Origin", allowedOrigins[0]);
     res.set("Access-Control-Allow-Methods", "POST");
     res.set("Access-Control-Allow-Headers", "Content-Type");
     res.set("Access-Control-Max-Age", "3600");
