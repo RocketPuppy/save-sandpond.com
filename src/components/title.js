@@ -1,5 +1,4 @@
 import React from 'react'
-import Title from "../components/title";
 import glamorous from "glamorous";
 import styles from "../utils/styles";
 
