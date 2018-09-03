@@ -5,6 +5,7 @@ import Hero from "../components/hero";
 import ContentHero from "../components/content-hero";
 import glamorous from "glamorous";
 import ActionContent from "../components/action-content";
+import MailingListSignup from "../components/mailing-list-signup";
 
 const IndexPage = ({ data }) => (
   <FullWidth>
@@ -57,7 +58,8 @@ const IndexPage = ({ data }) => (
       header={<span>Help Save Sand&nbsp;Pond</span>}
       items={[
         (<span>Come to the <a href="https://www.facebook.com/events/2141315522855942/">Sand Pond Palooza!</a></span>),
-        (<span>Email us at: <a href="mailto:savesandpond@gmail.com">savesandpond@gmail.com</a></span>)
+        (<span>Email us at: <a href="mailto:savesandpond@gmail.com">savesandpond@gmail.com</a></span>),
+        (<div><span>Join our mailing list:</span><MailingListSignup /></div>)
       ]}
     />
   </FullWidth>
