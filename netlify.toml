@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/mailing-list-signup"
+  to = "MAILING_LIST_SIGNUP_ENDPOINT"
+  status = 301
