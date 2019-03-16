@@ -6,6 +6,7 @@ import ContentHero from "../components/content-hero";
 import glamorous from "glamorous";
 import ActionContent from "../components/action-content";
 import MailingListSignup from "../components/mailing-list-signup";
+import Announcement from "../components/announcement";
 
 const IndexPage = ({ data }) => (
   <FullWidth>
@@ -19,6 +20,13 @@ const IndexPage = ({ data }) => (
       textOutlineColor="white"
       text="Save Sand Pond"
     />
+    <Announcement>
+      <div>
+        <p>Join us at the Save Sand Pond FUNraiser and comedy show! Featuring New England's best comedians!</p>
+        <p><strong>Sunday, March 31 at St Benedict's Church. 70 Transit Street, Warwick RI</strong></p>
+        <p><a href="https://www.funny4funds.com/events/save-sand-pond-funraiser/350">Purchase tickets and sponsorships</a></p>
+      </div>
+    </Announcement>
     <ContentHero
       alignment="left"
       theme="green"
