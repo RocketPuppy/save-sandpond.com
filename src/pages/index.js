@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => (
       <div>
         <p>Join us at the Save Sand Pond FUNraiser and comedy show! Featuring New England's best comedians!</p>
         <p><strong>Sunday, March 31 at St Benedict's Church. 70 Transit Street, Warwick RI</strong></p>
-        <p><a href="https://www.funny4funds.com/events/save-sand-pond-funraiser/350">Purchase tickets and sponsorships</a></p>
+        <p><a target="_blank" href="https://www.funny4funds.com/events/save-sand-pond-funraiser/350">Purchase tickets and sponsorships</a></p>
       </div>
     </Announcement>
     <ContentHero
