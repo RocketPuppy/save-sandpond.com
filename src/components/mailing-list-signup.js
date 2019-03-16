@@ -20,7 +20,7 @@ const SmallInput = glamorous.input({
 
 const SubmitButton = glamorous.button({
   marginBottom: styles.spacing.large,
-  maxWidth: "100px",
+  maxWidth: "120px",
   alignSelf: "flex-end"
 });
 
